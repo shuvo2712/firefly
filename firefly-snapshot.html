@@ -428,7 +428,7 @@
 <!-- NAVBAR -->
 <nav id="navbar">
   <a class="nav-logo" href="#" onclick="showPage('home')">
-    <img src="assests/logo/logo-dark.jpeg" alt="FIREFLY" class="nav-logo-img" id="nav-logo-img">
+    <img src="assests/logo/logo-dark.png" alt="FIREFLY" class="nav-logo-img" id="nav-logo-img">
   </a>
   <div class="nav-links">
     <a href="#" class="active" id="nav-home" onclick="showPage('home'); return false;">Home</a>
@@ -457,7 +457,7 @@
   <!-- Hero -->
   <div class="hero">
     <div class="hero-bg">
-      <img src="https://media.base44.com/images/public/69ea5c2670f5d2495626235d/d04d21f27_generated_3cd3b0c0.png" alt="Focus light beam" />
+      <img src="assests/hero-switch-bg.png" alt="Premium Switchboard" />
       <div></div>
     </div>
     <div class="hero-grid-lines">
@@ -796,7 +796,7 @@ function updateLogo() {
   const logo = document.getElementById('nav-logo-img');
   if (!logo) return;
   const isLight = document.body.classList.contains('light-theme');
-  logo.src = isLight ? 'assests/logo/logo-white.jpeg' : 'assests/logo/logo-dark.jpeg';
+  logo.src = isLight ? 'assests/logo/logo-light.png' : 'assests/logo/logo-dark.png';
 }
 
 function initTheme() {
