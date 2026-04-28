@@ -979,6 +979,12 @@
       transition: border-color 0.2s;
     }
 
+    .form-select option {
+      background-color: #121214;
+      color: #ffffff;
+    }
+
+
     .form-input:focus,
     .form-textarea:focus,
     .form-select:focus {
@@ -1405,7 +1411,7 @@
     <!-- Hero -->
     <div class="hero">
       <div class="hero-bg">
-        <img src="assests/hero-switch-bg.png" alt="Premium Switchboard" />
+        <img src="assests/hero-bg.png" alt="Premium Switchboard" />
         <div></div>
       </div>
       <div class="hero-grid-lines">
@@ -1802,6 +1808,7 @@
     function toggleTheme() {
       const isLight = document.body.classList.toggle('light-theme');
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      document.documentElement.style.colorScheme = isLight ? 'light' : 'dark';
       updateLogo();
     }
 
@@ -1814,9 +1821,11 @@
 
     function initTheme() {
       const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'light') {
+      const isLight = savedTheme === 'light';
+      if (isLight) {
         document.body.classList.add('light-theme');
       }
+      document.documentElement.style.colorScheme = isLight ? 'light' : 'dark';
       updateLogo();
     }
     initTheme();
