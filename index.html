@@ -184,7 +184,11 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, var(--bg) 20%, rgba(var(--bg-rgb), 0.4) 50%, transparent 100%);
+      background: linear-gradient(to right, var(--bg) 15%, transparent 50%);
+    }
+
+    body.light-theme .hero-bg::after {
+      background: radial-gradient(circle at 0% 0%, var(--bg) 10%, transparent 50%);
     }
 
     .hero-grid-lines {
